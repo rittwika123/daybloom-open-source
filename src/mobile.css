@@ -1,0 +1,125 @@
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip;
+}
+
+.mobile-header {
+  position: sticky;
+  min-width: 0;
+  gap: 10px;
+}
+
+.mobile-brand {
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.header-actions {
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.header-actions.search-open .search-input {
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  right: 104px;
+  width: auto;
+}
+
+.detail-screen,
+.detail-card,
+.detail-options,
+.detail-tools-grid,
+.option-row,
+.detail-section {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.detail-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.detail-tools-grid > .detail-section {
+  min-width: 0;
+  margin-top: 24px;
+}
+
+.detail-tools-grid .text-field {
+  width: 100%;
+  min-width: 0;
+}
+
+.detail-tools-grid .primary-button {
+  width: 100%;
+  margin-top: 10px;
+  white-space: normal;
+}
+
+.detail-tools-grid p {
+  overflow-wrap: anywhere;
+}
+
+.activity-timer-display {
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-timer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .detail-tools-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .detail-tools-grid > .detail-section {
+    margin-top: 20px;
+  }
+
+  .option-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .option-row input[type='date'] {
+    width: 140px;
+    max-width: 140px;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-header {
+    padding-inline: 12px;
+  }
+
+  .main-wrap {
+    padding-inline: 12px;
+  }
+
+  .detail-card {
+    padding: 14px;
+  }
+
+  .detail-title-row {
+    gap: 9px;
+  }
+
+  .detail-tags {
+    margin-left: 38px;
+  }
+}
